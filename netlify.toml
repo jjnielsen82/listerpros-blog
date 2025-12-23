@@ -7,6 +7,12 @@
   # Directory to deploy
   publish = "dist"
 
+# Redirect root to blog
+[[redirects]]
+  from = "/"
+  to = "/blog/"
+  status = 302
+
 # Redirects for clean URLs (no .html extension needed)
 [[redirects]]
   from = "/blog/*"
