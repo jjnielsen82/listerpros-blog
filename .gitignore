@@ -1,0 +1,33 @@
+# Build output (generated, don't track)
+# Actually, we DO want to track dist/ so Netlify can deploy it
+# dist/
+
+# Logs
+scripts/agent.log
+scripts/agent.error.log
+*.log
+
+# Environment files with secrets
+config.env
+.env
+*.env.local
+
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Processed sources tracking (internal use)
+.processed_sources.json

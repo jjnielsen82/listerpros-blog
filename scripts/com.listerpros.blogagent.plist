@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+    ListerPros Blog Agent - macOS LaunchDaemon
+
+    This runs the blog agent automatically on macOS.
+
+    Installation:
+    1. Edit the paths below to match your setup
+    2. Add your ANTHROPIC_API_KEY to the EnvironmentVariables section
+    3. Copy to ~/Library/LaunchAgents/
+    4. Load with: launchctl load ~/Library/LaunchAgents/com.listerpros.blogagent.plist
+    5. Start with: launchctl start com.listerpros.blogagent
+
+    To stop:
+    launchctl stop com.listerpros.blogagent
+    launchctl unload ~/Library/LaunchAgents/com.listerpros.blogagent.plist
+-->
+<dict>
+    <key>Label</key>
+    <string>com.listerpros.blogagent</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/jordannielsen/Desktop/homejab.com-backup/listerpros_markdown_posts/scripts/blog_agent.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/jordannielsen/Desktop/homejab.com-backup/listerpros_markdown_posts</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- Grok API Key - get from https://console.x.ai/ -->
+        <key>GROK_API_KEY</key>
+        <string>YOUR_GROK_API_KEY_HERE</string>
+        <!-- Optional Netlify credentials -->
+        <!--
+        <key>NETLIFY_SITE_ID</key>
+        <string>your-site-id</string>
+        <key>NETLIFY_AUTH_TOKEN</key>
+        <string>your-token</string>
+        -->
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/jordannielsen/Desktop/homejab.com-backup/listerpros_markdown_posts/scripts/agent.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/jordannielsen/Desktop/homejab.com-backup/listerpros_markdown_posts/scripts/agent.error.log</string>
+</dict>
+</plist>

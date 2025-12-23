@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Real Estate Photography Blog | ListerPros</title>
+    <meta name="title" content="Real Estate Photography Blog | ListerPros">
+    <meta name="description" content="Expert tips, guides, and insights on real estate photography, video tours, drone photography, and visual marketing for agents. Updated daily.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://listerpros.com/blog">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://listerpros.com/blog">
+    <meta property="og:title" content="Real Estate Photography Blog | ListerPros">
+    <meta property="og:description" content="Expert tips, guides, and insights on real estate photography, video tours, drone photography, and visual marketing for agents.">
+    <meta property="og:image" content="https://listerpros.com/images/blog-og.jpg">
+    <meta property="og:site_name" content="ListerPros">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://listerpros.com/blog">
+    <meta property="twitter:title" content="Real Estate Photography Blog | ListerPros">
+    <meta property="twitter:description" content="Expert tips, guides, and insights on real estate photography, video tours, drone photography, and visual marketing for agents.">
+    <meta property="twitter:image" content="https://listerpros.com/images/blog-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Blog Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "ListerPros Real Estate Photography Blog",
+        "description": "Expert tips, guides, and insights on real estate photography, video tours, drone photography, and visual marketing for agents.",
+        "url": "https://listerpros.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ListerPros",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://listerpros.com/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-primary: #2563eb;
+            --color-primary-dark: #1d4ed8;
+            --color-secondary: #0f172a;
+            --color-text: #334155;
+            --color-text-light: #64748b;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f8fafc;
+            --color-border: #e2e8f0;
+            --color-accent: #f59e0b;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-serif: 'Merriweather', Georgia, serif;
+            --max-width: 1200px;
+        }
+
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Base */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .site-header {
+            background: var(--color-secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            background: var(--color-primary);
+            color: #fff !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            transition: background 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--color-primary-dark);
+        }
+
+        /* Hero Section */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #1e293b 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .blog-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Search */
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-text-light);
+        }
+
+        /* Filter Tags */
+        .filter-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .filter-tag {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid var(--color-border);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+        }
+
+        /* Blog Grid */
+        .blog-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .view-btn {
+            padding: 0.5rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--color-text-light);
+            transition: all 0.2s;
+        }
+
+        .view-btn.active,
+        .view-btn:hover {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+        }
+
+        /* Featured Post */
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .featured-image {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: var(--color-bg-alt);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .featured-content h2 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .featured-content h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .featured-content h2 a:hover {
+            color: var(--color-primary);
+        }
+
+        .featured-content p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card-image {
+            aspect-ratio: 16/10;
+            background: var(--color-bg-alt);
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8125rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .blog-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--color-primary);
+        }
+
+        .blog-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .card-tag {
+            background: var(--color-bg-alt);
+            color: var(--color-text-light);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.6875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .pagination a,
+        .pagination span {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .pagination a {
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .pagination a:hover {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+        }
+
+        .pagination .current {
+            background: var(--color-primary);
+            color: #fff;
+        }
+
+        .pagination .dots {
+            color: var(--color-text-light);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--color-bg-alt);
+            padding: 4rem 0;
+        }
+
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--color-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .newsletter-section p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.875rem 1.25rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--color-primary);
+        }
+
+        .newsletter-form button {
+            background: var(--color-primary);
+            color: #fff;
+            padding: 0.875rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--color-primary-dark);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--color-secondary);
+            color: #94a3b8;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.875rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .featured-post {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">Lister<span>Pros</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="hero-container">
+            <h1>Real Estate Photography Insights</h1>
+            <p>Expert tips, guides, and strategies to help real estate agents sell faster with stunning visual media.</p>
+            <div class="search-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="search" placeholder="Search articles..." id="blog-search">
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tags -->
+    <section class="filter-section">
+        <div class="filter-tags">
+            <button class="filter-tag active" data-filter="all">All Posts</button>
+            <button class="filter-tag" data-filter="photography">Photography</button>
+            <button class="filter-tag" data-filter="video">Video Tours</button>
+            <button class="filter-tag" data-filter="drone">Drone</button>
+            <button class="filter-tag" data-filter="staging">Virtual Staging</button>
+            <button class="filter-tag" data-filter="marketing">Marketing</button>
+            <button class="filter-tag" data-filter="tips">Tips & Guides</button>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-section">
+        <div class="section-header">
+            <h2>Latest Articles</h2>
+            <div class="view-toggle">
+                <button class="view-btn active" aria-label="Grid view">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </button>
+                <button class="view-btn" aria-label="List view">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Featured Post -->
+        <article class="featured-post">
+            <div class="featured-image">
+                <img src="/blog/images/featured-placeholder.jpg" alt="Featured article image">
+            </div>
+            <div class="featured-content">
+                <span class="featured-badge">Featured</span>
+                <h2><a href="#">The Complete Guide to Marketing Luxury Homes in Scottsdale, Arizona This December</a></h2>
+                <p>Marketing luxury homes in Scottsdale, Arizona, during December 2025 requires unique strategies. From leveraging snowbird season to showcasing desert charm, this guide offers actionable tips for real estate agents to close deals in the winter peak.</p>
+                <div class="featured-meta">
+                    <span>December 23, 2025</span>
+                    <span>6 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/phoenix-housing-market-update-2025-best-practices-arizona.jpg" alt="Phoenix Housing Market Update for Listing Agents: 2025 Best Practices in Arizona">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 23, 2025</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3><a href="/blog/phoenix-housing-market-update-2025-best-practices-arizona">Phoenix Housing Market Update for Listing Agents: 2025 Best Practices in Arizona</a></h3>
+                    <p>As we head into winter 2025, the Phoenix housing market offers unique opportunities for listing agents in Arizona. This update covers the latest trend...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">arizona</span><span class="card-tag">real-estate-photography</span><span class="card-tag">phoenix-housing-market</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/social-media-video-tips-arizona-real-estate-agents-2025.jpg" alt="Social Media Video Tips for Arizona Real Estate Agents: 2025 Best Practices">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 23, 2025</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3><a href="/blog/social-media-video-tips-arizona-real-estate-agents-2025">Social Media Video Tips for Arizona Real Estate Agents: 2025 Best Practices</a></h3>
+                    <p>As an Arizona real estate agent, mastering social media video in 2025 is key to standing out. With snowbird season in full swing, learn actionable tip...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">arizona</span><span class="card-tag">real-estate-photography</span><span class="card-tag">social-media-marketing</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/mastering-virtual-staging-arizona-homes-winter-market.jpg" alt="Mastering Virtual Staging for Arizona Homes: Boost Sales in the Winter Market">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 23, 2025</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3><a href="/blog/mastering-virtual-staging-arizona-homes-winter-market">Mastering Virtual Staging for Arizona Homes: Boost Sales in the Winter Market</a></h3>
+                    <p>Virtual staging is a game-changer for Arizona real estate agents, especially during the winter snowbird season. Discover how to showcase Phoenix, Mesa...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">arizona</span><span class="card-tag">real-estate-photography</span><span class="card-tag">virtual-staging</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/social-media-algorithm-changes-tips-sedona-arizona-agents.jpg" alt="Navigating Social Media Algorithm Changes: Tips for Sedona Real Estate Agents in Arizona">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 23, 2025</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3><a href="/blog/social-media-algorithm-changes-tips-sedona-arizona-agents">Navigating Social Media Algorithm Changes: Tips for Sedona Real Estate Agents in Arizona</a></h3>
+                    <p>Social media algorithms are evolving in 2025, and Sedona real estate agents need to adapt. This guide offers actionable tips tailored for Arizona’s wi...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">arizona</span><span class="card-tag">real-estate-photography</span><span class="card-tag">social-media-marketing</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/qualities-top-real-estate-photographers.jpg" alt="Unlocking Success: Key Qualities of Top Real Estate Photographers">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 30, 2024</span>
+                        <span>12 min read</span>
+                    </div>
+                    <h3><a href="/blog/qualities-top-real-estate-photographers">Unlocking Success: Key Qualities of Top Real Estate Photographers</a></h3>
+                    <p>Explore the vital attributes and skills that make real estate photographers stand out. Learn how professionalism, tech-savviness, and flexibility can ...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">real-estate</span><span class="card-tag">photography</span><span class="card-tag">guide</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/master-vacation-rental-photography.jpg" alt="Unlocking the Magic: 12 Essential Techniques for Captivating Vacation Rental Photography">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 27, 2024</span>
+                        <span>10 min read</span>
+                    </div>
+                    <h3><a href="/blog/master-vacation-rental-photography">Unlocking the Magic: 12 Essential Techniques for Captivating Vacation Rental Photography</a></h3>
+                    <p>Master vacation rental photography with these 12 essential techniques. Learn how to capture images that entice travelers and boost your booking rates....</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">photography</span><span class="card-tag">real-estate</span><span class="card-tag">vacation-rentals</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/compelling-real-estate-videos-techniques.jpg" alt="Crafting Compelling Real Estate Videos: Engaging Techniques for Maximum Impact">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 25, 2024</span>
+                        <span>12 min read</span>
+                    </div>
+                    <h3><a href="/blog/compelling-real-estate-videos-techniques">Crafting Compelling Real Estate Videos: Engaging Techniques for Maximum Impact</a></h3>
+                    <p>Learn how to create engaging real estate videos that connect with viewers and showcase properties effectively. Elevate your video marketing strategy t...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">real-estate</span><span class="card-tag">video</span><span class="card-tag">marketing</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/mastering-hdr-real-estate-photography.jpg" alt="Mastering HDR Real Estate Photography: Techniques for Natural Results">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 22, 2024</span>
+                        <span>10 min read</span>
+                    </div>
+                    <h3><a href="/blog/mastering-hdr-real-estate-photography">Mastering HDR Real Estate Photography: Techniques for Natural Results</a></h3>
+                    <p>Discover essential techniques for capturing natural-looking HDR real estate photos. Enhance your listings with expert HDR photography tips....</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">photography</span><span class="card-tag">hdr</span><span class="card-tag">real-estate</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/transforming-real-estate-marketing-visuals.jpg" alt="Transforming Real Estate Marketing: The Essential Role of High-Quality Visuals">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 22, 2024</span>
+                        <span>12 min read</span>
+                    </div>
+                    <h3><a href="/blog/transforming-real-estate-marketing-visuals">Transforming Real Estate Marketing: The Essential Role of High-Quality Visuals</a></h3>
+                    <p>Explore the transformative power of high-quality visuals in real estate marketing and how they enhance brand identity, SEO, and sales strategies....</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">real-estate</span><span class="card-tag">marketing</span><span class="card-tag">photography</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/cutting-edge-tools-real-estate-seo.jpg" alt="Unlocking Success: 7 Cutting-Edge Tools for Real Estate SEO Mastery">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 21, 2024</span>
+                        <span>12 min read</span>
+                    </div>
+                    <h3><a href="/blog/cutting-edge-tools-real-estate-seo">Unlocking Success: 7 Cutting-Edge Tools for Real Estate SEO Mastery</a></h3>
+                    <p>Learn how real estate professionals use advanced SEO tools to dominate local markets and attract more leads. Discover actionable strategies for succes...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">real-estate</span><span class="card-tag">SEO</span><span class="card-tag">marketing</span>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/benefits-local-professional-real-estate-photography.jpg" alt="Why Partnering with Local Professionals Enhances Real Estate Photography">
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span>December 21, 2024</span>
+                        <span>12 min read</span>
+                    </div>
+                    <h3><a href="/blog/benefits-local-professional-real-estate-photography">Why Partnering with Local Professionals Enhances Real Estate Photography</a></h3>
+                    <p>Explore the advantages of using local professional photographers for real estate listings and how this choice can significantly improve your marketing...</p>
+                    <div class="blog-card-tags">
+                        <span class="card-tag">real-estate</span><span class="card-tag">photography</span><span class="card-tag">marketing</span>
+                    </div>
+                </div>
+            </article>
+        
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination">
+            <a href="#" aria-label="Previous page">&larr; Prev</a>
+            <a href="#" class="current">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <span class="dots">...</span>
+            <a href="#">42</a>
+            <a href="#" aria-label="Next page">Next &rarr;</a>
+        </nav>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2>Stay Updated</h2>
+            <p>Get the latest real estate photography tips and marketing strategies delivered to your inbox weekly.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services/photography">Real Estate Photography</a></li>
+                        <li><a href="/services/video">Video Tours</a></li>
+                        <li><a href="/services/drone">Drone Photography</a></li>
+                        <li><a href="/services/virtual-staging">Virtual Staging</a></li>
+                        <li><a href="/services/3d-tours">3D Virtual Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/blog/guides">Guides</a></li>
+                        <li><a href="/testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@listerpros.com">hello@listerpros.com</a></li>
+                        <li><a href="tel:+1-800-555-0123">1-800-555-0123</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ListerPros. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.getElementById('blog-search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.blog-card');
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('p').textContent.toLowerCase();
+                if (title.includes(query) || excerpt.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter tags
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                // Add filtering logic here based on data-filter attribute
+            });
+        });
+    </script>
+</body>
+</html>

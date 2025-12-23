@@ -1,0 +1,32 @@
+# Netlify Build Configuration for ListerPros Blog
+
+[build]
+  # Build command - converts markdown to HTML
+  command = "python3 scripts/build_blog.py"
+
+  # Directory to deploy
+  publish = "dist"
+
+# Redirects for clean URLs (no .html extension needed)
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/:splat.html"
+  status = 200
+  force = false
+
+# Headers for SEO and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/blog/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
