@@ -74,29 +74,22 @@ TOPIC_CATEGORIES = {
     ],
 }
 
-# Stock images for blog posts (using Unsplash direct links)
-STOCK_IMAGES = {
-    "photography_tips": [
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop",
-    ],
-    "arizona_market": [
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop",
-    ],
-    "marketing": [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600573472591-ee6c8e695f3c?w=1200&h=630&fit=crop",
-    ],
-    "industry_news": [
-        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&h=630&fit=crop",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&h=630&fit=crop",
-    ],
-}
+# Portfolio images directory (your own photos)
+BLOG_IMAGES_DIR = Path(__file__).parent.parent / "images" / "blog"
+
+
+def get_random_blog_image() -> str:
+    """Get a random image from the blog images folder."""
+    if BLOG_IMAGES_DIR.exists():
+        images = list(BLOG_IMAGES_DIR.glob("*.jpg")) + \
+                 list(BLOG_IMAGES_DIR.glob("*.jpeg")) + \
+                 list(BLOG_IMAGES_DIR.glob("*.png")) + \
+                 list(BLOG_IMAGES_DIR.glob("*.webp"))
+        if images:
+            selected = random.choice(images)
+            return f"/images/blog/{selected.name}"
+    # Fallback to a default if no images found
+    return "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop"
 
 
 def search_trending_topics() -> dict:
@@ -316,8 +309,8 @@ def save_blog_post(blog_data: dict) -> Optional[str]:
     formatted_date = now.strftime("%B %d, %Y")
     category = blog_data.get("category", "photography_tips")
 
-    # Select a random image for this category
-    featured_image = random.choice(STOCK_IMAGES.get(category, STOCK_IMAGES["photography_tips"]))
+    # Select a random image from your portfolio
+    featured_image = get_random_blog_image()
 
     # Calculate read time
     read_time = calculate_read_time(blog_data["content"])
