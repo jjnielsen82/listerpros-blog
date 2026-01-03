@@ -22,6 +22,9 @@ POSTS_DIR = Path(__file__).parent.parent  # Save posts to root directory
 TEMPLATES_DIR = Path(__file__).parent.parent / "templates"
 POSTS_JSON = Path(__file__).parent.parent / "posts.json"
 
+# Dynamic current year - blog posts should always reference this year
+CURRENT_YEAR = datetime.now().year
+
 # =============================================================================
 # LISTERPROS BRAND GUIDELINES
 # =============================================================================
@@ -301,15 +304,21 @@ Based on the topic seed "{base_topic}", generate a specific, timely blog post to
 3. Position ListerPros as the authority on real estate photography in Arizona
 4. Be specific enough to write a comprehensive, actionable article
 
+IMPORTANT - CURRENT YEAR REQUIREMENT:
+- Today's date is {datetime.now().strftime('%B %d, %Y')} - the current year is {CURRENT_YEAR}
+- If the title includes a year, it MUST be {CURRENT_YEAR} (not 2024, not 2025 - use {CURRENT_YEAR})
+- Frame all content as current and relevant for {CURRENT_YEAR}
+- Example: "{CURRENT_YEAR} Arizona Real Estate Trends" NOT "2024 Arizona Real Estate Trends"
+
 The topic should:
 - Have clear search intent (someone would actually Google this)
 - Be specific and actionable (not too broad)
 - Connect to Arizona/Phoenix when possible
-- Be timely or evergreen (consider seasonal relevance)
+- Be timely and current for {CURRENT_YEAR}
 
 Respond with ONLY a JSON object in this exact format:
 {{
-    "title": "The complete blog post title (50-65 characters ideal for SEO)",
+    "title": "The complete blog post title (50-65 characters ideal for SEO) - if including a year, use {CURRENT_YEAR}",
     "search_query": "A search query to research current information on this topic",
     "angle": "The unique angle or hook that makes this article valuable",
     "target_keywords": ["primary keyword", "secondary keyword", "long-tail keyword"],
@@ -363,17 +372,19 @@ def research_topic(topic_data: dict) -> str:
 Topic: "{topic_data['title']}"
 Search query: {search_query}
 
+CURRENT YEAR: {CURRENT_YEAR} (today is {datetime.now().strftime('%B %d, %Y')})
+
 Research and provide:
-1. KEY FACTS & STATISTICS - Use ONLY current 2025-2026 data when available. If recent data isn't available, focus on general industry principles and best practices instead of citing old statistics.
-2. CURRENT TRENDS - What's happening NOW in this space (2025-2026)
+1. KEY FACTS & STATISTICS - Use data from {CURRENT_YEAR} or {CURRENT_YEAR - 1} when available. If recent data isn't available, focus on general industry principles and best practices instead of citing old statistics.
+2. CURRENT TRENDS - What's happening NOW in {CURRENT_YEAR}
 3. ARIZONA-SPECIFIC INSIGHTS - Information relevant to Phoenix/Tucson/Arizona market
 4. ACTIONABLE TIPS - Practical advice readers can implement
 5. EXPERT PERSPECTIVES - Industry viewpoints or best practices
 6. COMMON MISTAKES - What to avoid
 
 IMPORTANT:
-- Avoid citing statistics from 2022 or 2023 - they're outdated
-- If you don't have recent data, focus on timeless principles and practical tips instead
+- Frame everything as current for {CURRENT_YEAR}
+- If you don't have {CURRENT_YEAR} data, focus on timeless principles and practical tips instead
 - It's better to give actionable advice than outdated statistics
 - Format as detailed bullet points"""
 
@@ -412,6 +423,13 @@ ANGLE: {topic_data.get('angle', 'comprehensive guide')}
 TARGET KEYWORDS: {', '.join(topic_data.get('target_keywords', []))}
 SEARCH INTENT: {topic_data.get('search_intent', 'informational')}
 
+=== CURRENT YEAR ===
+TODAY'S DATE: {datetime.now().strftime('%B %d, %Y')}
+CURRENT YEAR: {CURRENT_YEAR}
+- If the title or content references a year, it MUST be {CURRENT_YEAR}
+- Frame all content as current and relevant for {CURRENT_YEAR}
+- This blog post should feel fresh and timely, written in {CURRENT_YEAR}
+
 === RESEARCH NOTES ===
 {research}
 
@@ -426,9 +444,10 @@ STRUCTURE:
 
 CONTENT GUIDELINES:
 - Write 1,400-1,800 words (comprehensive but not padded)
-- Focus on actionable advice over statistics - if you cite data, only use 2025-2026 statistics
-- AVOID citing any statistics from 2022 or 2023 - they are outdated and hurt credibility
-- If you don't have current data, use phrases like "industry research shows" or "studies consistently find" without specific years
+- ALL YEARS IN TITLES AND CONTENT MUST BE {CURRENT_YEAR} - never use 2024 or 2025
+- You may reference statistics from previous years (e.g., "{CURRENT_YEAR - 1} data showed...") but the post itself should be framed as a {CURRENT_YEAR} article
+- Focus on actionable advice over statistics
+- If you don't have current data, use phrases like "industry research shows" or "studies consistently find"
 - Include practical, actionable advice readers can implement today
 - Write in second person ("you") to engage the reader
 - Break up text with subheadings every 200-300 words
