@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | ListerPros Blog</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <link rel="canonical" href="https://listerpros.com/blog/{{SLUG}}">
+    <link rel="shortcut icon" href="https://listerpros.com/images/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{TITLE}} | ListerPros Blog">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://listerpros.com/blog/{{SLUG}}">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <meta property="article:published_time" content="{{PUBLISH_DATE}}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTLTLXNRZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HTLTLXNRZG');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '414237694238106');
+        fbq('track', 'PageView');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0084FF',
+                        secondary: '#006ACC',
+                        accent: '#00D4FF',
+                        dark: '#0A0A0A',
+                        success: '#00C853',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #0084FF 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .prose h2 { @apply text-2xl font-bold mt-8 mb-4 text-gray-900; }
+        .prose h3 { @apply text-xl font-bold mt-6 mb-3 text-gray-900; }
+        .prose p { @apply mb-4 leading-relaxed; }
+        .prose ul { @apply list-disc pl-6 mb-4 space-y-2; }
+        .prose ol { @apply list-decimal pl-6 mb-4 space-y-2; }
+        .prose a { @apply text-primary hover:underline; }
+        .prose blockquote { @apply border-l-4 border-primary pl-4 italic my-6 text-gray-600; }
+        .prose img { @apply rounded-xl my-6 w-full; }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{TITLE}}",
+        "description": "{{META_DESCRIPTION}}",
+        "image": "{{OG_IMAGE}}",
+        "datePublished": "{{PUBLISH_DATE}}",
+        "dateModified": "{{PUBLISH_DATE}}",
+        "author": {
+            "@type": "Organization",
+            "name": "ListerPros"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ListerPros",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://listerpros.com/images/logo-2.svg"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://listerpros.com/blog/{{SLUG}}"
+        }
+    }
+    </script>
+</head>
+<body class="font-sans text-gray-900 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="https://listerpros.com" class="flex items-center">
+                    <img src="https://listerpros.com/images/logo-2.svg" alt="ListerPros" class="h-8">
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="https://listerpros.com/pricing.html" class="text-gray-600 hover:text-primary font-medium transition">Pricing</a>
+                    <a href="https://listerpros.com/blog/" class="text-primary font-medium transition">Blog</a>
+                    <a href="https://media.listerpros.com/portal" class="text-gray-600 hover:text-primary font-medium transition">Sign in</a>
+                    <a href="https://media.listerpros.com/order-forms/ad92f54b-433c-4a6a-8be9-f9a9e9d2d97e" class="relative bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-secondary transition-all hover:scale-105">
+                        Book now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="https://listerpros.com/pricing.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Pricing</a>
+                <a href="https://listerpros.com/blog/" class="block px-4 py-3 text-primary hover:bg-gray-50 rounded-lg font-medium">Blog</a>
+                <a href="https://media.listerpros.com/portal" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Sign in</a>
+                <a href="https://media.listerpros.com/order-forms/ad92f54b-433c-4a6a-8be9-f9a9e9d2d97e" class="block px-4 py-3 bg-primary text-white text-center rounded-full font-semibold">Book now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="py-12 md:py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm">
+                <a href="https://listerpros.com" class="text-gray-500 hover:text-primary">Home</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="https://listerpros.com/blog/" class="text-gray-500 hover:text-primary">Blog</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-700">{{CATEGORY}}</span>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-4">
+                <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">{{CATEGORY}}</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6">{{TITLE}}</h1>
+
+            <!-- Meta Info -->
+            <div class="flex items-center gap-4 text-gray-500 text-sm mb-8 pb-8 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span>{{FORMATTED_DATE}}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>{{READ_TIME}} min read</span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-10">
+                <img src="{{FEATURED_IMAGE}}" alt="{{TITLE}}" class="w-full rounded-2xl shadow-lg">
+            </div>
+
+            <!-- Article Content -->
+            <div class="prose max-w-none text-gray-700 text-lg">
+                {{CONTENT}}
+            </div>
+
+            <!-- Tags -->
+            <div class="mt-10 pt-8 border-t border-gray-100">
+                <div class="flex flex-wrap gap-2">
+                    {{TAGS}}
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center">
+                <h3 class="text-2xl font-bold mb-3">Ready to Elevate Your Listings?</h3>
+                <p class="text-white/90 mb-6">Book professional real estate photography with 5-hour delivery included.</p>
+                <a href="https://media.listerpros.com/order-forms/ad92f54b-433c-4a6a-8be9-f9a9e9d2d97e" class="inline-block bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
+                    Book Your Shoot
+                </a>
+            </div>
+
+            <!-- Author Box -->
+            <div class="mt-10 p-6 bg-gray-50 rounded-2xl">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                        <img src="https://listerpros.com/images/logo-2.svg" alt="ListerPros" class="h-8">
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-900">ListerPros Team</p>
+                        <p class="text-gray-600 text-sm">Professional real estate photography serving Arizona since 2013. 150,000+ properties photographed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8">Related Articles</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                {{RELATED_POSTS}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://listerpros.com/images/logo-2.svg" alt="ListerPros" class="h-8 mb-4 brightness-0 invert">
+                    <p class="text-sm">Professional real estate media that helps you sell listings faster.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://listerpros.com/pricing.html" class="hover:text-white transition">Photography</a></li>
+                        <li><a href="https://listerpros.com/pricing.html" class="hover:text-white transition">Videography</a></li>
+                        <li><a href="https://listerpros.com/pricing.html" class="hover:text-white transition">3D Tours</a></li>
+                        <li><a href="https://listerpros.com/pricing.html" class="hover:text-white transition">Virtual Staging</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://listerpros.com/about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="https://listerpros.com/blog/" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="https://listerpros.com/testimonials.html" class="hover:text-white transition">Testimonials</a></li>
+                        <li><a href="https://listerpros.com/help-center.html" class="hover:text-white transition">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://media.listerpros.com/order-forms/ad92f54b-433c-4a6a-8be9-f9a9e9d2d97e" class="hover:text-white transition">Book a Shoot</a></li>
+                        <li><a href="https://media.listerpros.com/portal" class="hover:text-white transition">Sign In</a></li>
+                        <li><a href="https://listerpros.com/pricing.html" class="hover:text-white transition">View Pricing</a></li>
+                    </ul>
+                    <p class="text-sm mt-4">Mesa, AZ (HQ)</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2026 ListerPros. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
