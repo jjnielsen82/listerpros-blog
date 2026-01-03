@@ -73,14 +73,15 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .prose h2 { @apply text-2xl font-bold mt-8 mb-4 text-gray-900; }
-        .prose h3 { @apply text-xl font-bold mt-6 mb-3 text-gray-900; }
-        .prose p { @apply mb-4 leading-relaxed; }
-        .prose ul { @apply list-disc pl-6 mb-4 space-y-2; }
-        .prose ol { @apply list-decimal pl-6 mb-4 space-y-2; }
+        .prose h2 { @apply text-2xl font-bold mt-10 mb-5 text-gray-900; }
+        .prose h3 { @apply text-xl font-bold mt-8 mb-4 text-gray-900; }
+        .prose p { @apply mb-6 leading-relaxed; }
+        .prose ul { @apply list-disc pl-6 mb-6 space-y-2; }
+        .prose ol { @apply list-decimal pl-6 mb-6 space-y-2; }
         .prose a { @apply text-primary hover:underline; }
-        .prose blockquote { @apply border-l-4 border-primary pl-4 italic my-6 text-gray-600; }
-        .prose img { @apply rounded-xl my-6 w-full; }
+        .prose blockquote { @apply border-l-4 border-primary pl-4 italic my-8 text-gray-600; }
+        .prose img { @apply rounded-xl my-8 w-full; }
+        .prose p + p { @apply mt-6; }
     </style>
 
     <!-- JSON-LD Structured Data -->

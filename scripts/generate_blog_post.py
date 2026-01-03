@@ -364,15 +364,18 @@ Topic: "{topic_data['title']}"
 Search query: {search_query}
 
 Research and provide:
-1. KEY FACTS & STATISTICS - Current data points that support the topic (include sources/timeframes when available)
-2. CURRENT TRENDS - What's happening now in this space
-3. ARIZONA-SPECIFIC INSIGHTS - Information relevant to Phoenix/Arizona market
+1. KEY FACTS & STATISTICS - Use ONLY current 2025-2026 data when available. If recent data isn't available, focus on general industry principles and best practices instead of citing old statistics.
+2. CURRENT TRENDS - What's happening NOW in this space (2025-2026)
+3. ARIZONA-SPECIFIC INSIGHTS - Information relevant to Phoenix/Tucson/Arizona market
 4. ACTIONABLE TIPS - Practical advice readers can implement
 5. EXPERT PERSPECTIVES - Industry viewpoints or best practices
 6. COMMON MISTAKES - What to avoid
 
-Format as detailed bullet points. Include specific numbers, percentages, and data when available.
-Focus on accuracy - don't make up statistics."""
+IMPORTANT:
+- Avoid citing statistics from 2022 or 2023 - they're outdated
+- If you don't have recent data, focus on timeless principles and practical tips instead
+- It's better to give actionable advice than outdated statistics
+- Format as detailed bullet points"""
 
     try:
         response = requests.post(
@@ -423,7 +426,9 @@ STRUCTURE:
 
 CONTENT GUIDELINES:
 - Write 1,400-1,800 words (comprehensive but not padded)
-- Use data and statistics from the research to support points
+- Focus on actionable advice over statistics - if you cite data, only use 2025-2026 statistics
+- AVOID citing any statistics from 2022 or 2023 - they are outdated and hurt credibility
+- If you don't have current data, use phrases like "industry research shows" or "studies consistently find" without specific years
 - Include practical, actionable advice readers can implement today
 - Write in second person ("you") to engage the reader
 - Break up text with subheadings every 200-300 words
