@@ -22,7 +22,63 @@ POSTS_DIR = Path(__file__).parent.parent  # Save posts to root directory
 TEMPLATES_DIR = Path(__file__).parent.parent / "templates"
 POSTS_JSON = Path(__file__).parent.parent / "posts.json"
 
-# Blog topic categories with specific focus areas
+# =============================================================================
+# LISTERPROS BRAND GUIDELINES
+# =============================================================================
+BRAND_GUIDELINES = """
+ABOUT LISTERPROS:
+- ListerPros is Arizona's premier real estate photography company, founded in 2013 and headquartered in Mesa, AZ
+- We serve the entire Phoenix metro area including Phoenix, Scottsdale, Mesa, Gilbert, Chandler, Tempe, Glendale, Peoria, and surrounding areas
+- We've photographed over 150,000 properties and served 5,000+ real estate agents
+- We maintain a 4.9-star rating with 97%+ satisfaction rate
+
+OUR SERVICES:
+- Professional HDR Photography (with 5-HOUR SAME-DAY DELIVERY included - this is our key differentiator!)
+- Cinematic Video Tours
+- 3D Virtual Tours (Matterport & Zillow 3D)
+- Virtual Staging
+- Aerial Drone Photography & Video (FAA-certified pilots)
+- Floor Plans with dimensions
+- Twilight/Dusk Photography
+- FREE Community Photos (we have a library of 1,000+ Arizona communities)
+
+KEY SELLING POINTS TO WEAVE IN NATURALLY:
+- 5-hour photo delivery included on all shoots (fastest in Arizona)
+- Book online in 60 seconds - no phone calls needed
+- 20+ local Arizona photographers
+- All-in-one provider (photo, video, 3D, drone, staging)
+- Competitive pricing with transparent online quotes
+
+BRAND VOICE:
+- Professional yet approachable
+- Confident and authoritative on real estate photography topics
+- Helpful and educational (we want to genuinely help agents succeed)
+- Arizona-proud (we're local, we know the market)
+- Data-driven when possible (use statistics to back up claims)
+
+SEO TARGET KEYWORDS (incorporate naturally):
+- real estate photography Arizona
+- real estate photographer Phoenix
+- real estate photography Scottsdale
+- professional real estate photos
+- real estate media services Arizona
+- property photography Phoenix
+- listing photography Arizona
+- real estate video tours Phoenix
+- drone photography real estate Arizona
+- virtual staging Arizona
+
+WHAT TO AVOID:
+- Don't be salesy or pushy - educate first, soft-sell second
+- Don't make claims we can't back up
+- Don't disparage competitors
+- Don't use AI-generated images (we use our own portfolio)
+- Don't write generic content - always tie to Arizona/Phoenix when possible
+"""
+
+# =============================================================================
+# EXPANDED TOPIC CATEGORIES (100+ topics)
+# =============================================================================
 TOPIC_CATEGORIES = {
     "photography_tips": [
         "best camera angles for real estate photography",
@@ -35,6 +91,21 @@ TOPIC_CATEGORIES = {
         "how to photograph pools and outdoor spaces",
         "kitchen photography tips for real estate",
         "bathroom photography best practices",
+        "photographing homes with dark interiors",
+        "window pull technique in real estate photography",
+        "best time of day to photograph homes",
+        "wide angle lens tips for real estate",
+        "editing tips for real estate photos",
+        "how to photograph luxury homes",
+        "capturing outdoor living spaces Arizona",
+        "photographing desert landscaping",
+        "real estate photography composition rules",
+        "how to make listings stand out with photos",
+        "photographing open floor plans",
+        "real estate photo checklist for agents",
+        "preparing a home for professional photos",
+        "exterior photography curb appeal tips",
+        "how weather affects real estate photography",
     ],
     "arizona_market": [
         "Arizona real estate market trends",
@@ -47,6 +118,26 @@ TOPIC_CATEGORIES = {
         "Arizona desert landscaping for curb appeal",
         "monsoon season home preparation Arizona",
         "pool homes in Arizona real estate",
+        "Phoenix housing market forecast",
+        "best golf communities in Scottsdale",
+        "Peoria Arizona real estate guide",
+        "Glendale AZ housing market trends",
+        "Queen Creek new home developments",
+        "Surprise Arizona growth and real estate",
+        "Fountain Hills luxury homes market",
+        "Paradise Valley real estate trends",
+        "Ahwatukee neighborhood guide Phoenix",
+        "Cave Creek horse property market",
+        "Sun City retirement communities",
+        "Arizona snowbird real estate market",
+        "best school districts Phoenix metro",
+        "Arizona vacation rental investment",
+        "Phoenix downtown condo market",
+        "Arcadia neighborhood Phoenix real estate",
+        "Biltmore area homes Phoenix",
+        "North Scottsdale vs South Scottsdale",
+        "East Valley vs West Valley Arizona",
+        "Arizona new construction homes trends",
     ],
     "marketing": [
         "how professional photos help sell homes faster",
@@ -59,6 +150,26 @@ TOPIC_CATEGORIES = {
         "first impression importance in real estate",
         "how to choose a real estate photographer",
         "ROI of professional real estate photography",
+        "Instagram marketing for real estate agents",
+        "Facebook ads for real estate listings",
+        "creating listing videos that sell",
+        "real estate photography for luxury listings",
+        "how many photos for MLS listing",
+        "photo order for real estate listings",
+        "floor plans increase buyer interest",
+        "virtual tours for out of state buyers",
+        "real estate marketing budget allocation",
+        "branded vs unbranded listing photos",
+        "single property websites benefits",
+        "real estate email marketing with photos",
+        "Pinterest for real estate marketing",
+        "TikTok real estate marketing trends",
+        "YouTube for real estate agents",
+        "Google Business Profile for realtors",
+        "real estate photography for new agents",
+        "building a real estate brand with visuals",
+        "before and after virtual staging examples",
+        "real estate marketing during slow seasons",
     ],
     "industry_news": [
         "real estate photography technology trends",
@@ -71,6 +182,60 @@ TOPIC_CATEGORIES = {
         "real estate marketing automation tools",
         "NAR statistics on professional photography",
         "buyer behavior and online listing photos",
+        "Zillow 3D home tours adoption",
+        "Matterport real estate trends",
+        "drone regulations for real estate",
+        "smartphone vs professional real estate photos",
+        "real estate photography pricing trends",
+        "video marketing statistics real estate",
+        "virtual staging technology advances",
+        "real estate CRM integration with media",
+        "AI virtual staging developments",
+        "360 photography for real estate",
+        "real estate photography business trends",
+        "millennial home buyer preferences",
+        "Gen Z real estate expectations",
+        "remote home buying trends",
+        "international buyer real estate trends",
+    ],
+    "agent_success": [
+        "how top producing agents use photography",
+        "building a listing presentation with media",
+        "winning more listings with professional photos",
+        "real estate agent productivity tips",
+        "time management for busy agents",
+        "client communication best practices",
+        "handling multiple listings efficiently",
+        "real estate team photography workflows",
+        "pricing strategies for competitive markets",
+        "open house photography tips",
+        "real estate CMA presentation visuals",
+        "farming neighborhoods as a realtor",
+        "real estate referral generation strategies",
+        "building client relationships long term",
+        "real estate agent personal branding",
+        "leveraging testimonials in marketing",
+        "real estate coaching and mentorship",
+        "staying motivated in real estate",
+        "work life balance for realtors",
+        "real estate continuing education value",
+    ],
+    "seller_guides": [
+        "preparing your home for photography",
+        "decluttering tips before listing photos",
+        "curb appeal improvements that photograph well",
+        "staging on a budget for home sellers",
+        "what to expect during a photo shoot",
+        "why professional photos matter for sellers",
+        "timing your listing for best results",
+        "home improvements that increase value",
+        "Arizona specific home selling tips",
+        "selling a pool home in Arizona",
+        "selling during Arizona summer",
+        "relocating from Arizona guide",
+        "selling a luxury home guide",
+        "FSBO vs agent for home sales",
+        "understanding days on market metrics",
     ],
 }
 
@@ -88,8 +253,8 @@ def get_random_blog_image() -> str:
         if images:
             selected = random.choice(images)
             return f"/images/blog/{selected.name}"
-    # Fallback to a default if no images found
-    return "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop"
+    # Fallback - should not happen if images are added
+    return "/images/blog/ListerPros-001.jpg"
 
 
 def search_trending_topics() -> dict:
@@ -101,22 +266,29 @@ def search_trending_topics() -> dict:
     category = random.choice(list(TOPIC_CATEGORIES.keys()))
     base_topic = random.choice(TOPIC_CATEGORIES[category])
 
-    prompt = f"""You are a real estate photography content strategist.
+    prompt = f"""You are a senior content strategist for ListerPros, Arizona's premier real estate photography company.
 
-Based on the topic area "{base_topic}", generate a specific, timely blog post topic that would be valuable for real estate agents in Arizona.
+{BRAND_GUIDELINES}
 
-The topic should be:
-1. Specific and actionable (not too broad)
-2. SEO-friendly with clear search intent
-3. Relevant to current trends or seasonal considerations
-4. Focused on Arizona/Phoenix metro area when applicable
+Based on the topic seed "{base_topic}", generate a specific, timely blog post topic that would:
+1. Provide genuine value to real estate agents in Arizona
+2. Help ListerPros rank for relevant SEO keywords
+3. Position ListerPros as the authority on real estate photography in Arizona
+4. Be specific enough to write a comprehensive, actionable article
+
+The topic should:
+- Have clear search intent (someone would actually Google this)
+- Be specific and actionable (not too broad)
+- Connect to Arizona/Phoenix when possible
+- Be timely or evergreen (consider seasonal relevance)
 
 Respond with ONLY a JSON object in this exact format:
 {{
-    "title": "The complete blog post title (60-70 characters ideal)",
-    "search_query": "A search query to find current information on this topic",
-    "angle": "The unique angle or hook for this article",
-    "target_keywords": ["keyword1", "keyword2", "keyword3"]
+    "title": "The complete blog post title (50-65 characters ideal for SEO)",
+    "search_query": "A search query to research current information on this topic",
+    "angle": "The unique angle or hook that makes this article valuable",
+    "target_keywords": ["primary keyword", "secondary keyword", "long-tail keyword"],
+    "search_intent": "informational/transactional/navigational"
 }}"""
 
     try:
@@ -157,21 +329,25 @@ Respond with ONLY a JSON object in this exact format:
 
 def research_topic(topic_data: dict) -> str:
     """
-    Use Grok's search capability to research the topic and gather current information.
+    Use Grok to research the topic and gather current information.
     """
     search_query = topic_data.get("search_query", topic_data["title"])
 
-    prompt = f"""Research the following topic for a blog post: "{topic_data['title']}"
+    prompt = f"""You are researching for a blog post for ListerPros, Arizona's premier real estate photography company.
 
+Topic: "{topic_data['title']}"
 Search query: {search_query}
 
-Provide:
-1. Key facts and statistics (with approximate timeframes if available)
-2. Current trends and developments
-3. Practical tips and actionable advice
-4. Arizona/Phoenix specific information if relevant
+Research and provide:
+1. KEY FACTS & STATISTICS - Current data points that support the topic (include sources/timeframes when available)
+2. CURRENT TRENDS - What's happening now in this space
+3. ARIZONA-SPECIFIC INSIGHTS - Information relevant to Phoenix/Arizona market
+4. ACTIONABLE TIPS - Practical advice readers can implement
+5. EXPERT PERSPECTIVES - Industry viewpoints or best practices
+6. COMMON MISTAKES - What to avoid
 
-Format as bullet points that can be used to write a comprehensive blog post."""
+Format as detailed bullet points. Include specific numbers, percentages, and data when available.
+Focus on accuracy - don't make up statistics."""
 
     try:
         response = requests.post(
@@ -198,36 +374,69 @@ def generate_blog_content(topic_data: dict, research: str) -> dict:
     """
     Generate the full blog post content using Grok.
     """
-    prompt = f"""Write a comprehensive, SEO-optimized blog post for ListerPros, a professional real estate photography company based in Arizona.
+    prompt = f"""You are a professional blog writer for ListerPros. Write an authoritative, SEO-optimized blog post.
 
+{BRAND_GUIDELINES}
+
+=== ARTICLE DETAILS ===
 TOPIC: {topic_data['title']}
 ANGLE: {topic_data.get('angle', 'comprehensive guide')}
 TARGET KEYWORDS: {', '.join(topic_data.get('target_keywords', []))}
+SEARCH INTENT: {topic_data.get('search_intent', 'informational')}
 
-RESEARCH NOTES:
+=== RESEARCH NOTES ===
 {research}
 
-REQUIREMENTS:
-1. Write 1200-1500 words
-2. Use a professional but friendly tone
-3. Include practical, actionable advice
-4. Reference Arizona/Phoenix when relevant
-5. Naturally incorporate target keywords
-6. Include a compelling introduction that hooks the reader
-7. Use H2 and H3 subheadings for structure
-8. End with a conclusion that ties back to professional photography services
+=== WRITING REQUIREMENTS ===
 
-FORMAT YOUR RESPONSE AS JSON:
+STRUCTURE:
+1. HOOK - Start with a compelling opening that addresses the reader's pain point or goal
+2. INTRODUCTION - Set up the value they'll get from reading (2-3 paragraphs)
+3. BODY - Comprehensive coverage with H2 and H3 subheadings (main content)
+4. ARIZONA CONNECTION - Tie the topic to Arizona/Phoenix market when relevant
+5. CONCLUSION - Summarize key takeaways and soft CTA
+
+CONTENT GUIDELINES:
+- Write 1,400-1,800 words (comprehensive but not padded)
+- Use data and statistics from the research to support points
+- Include practical, actionable advice readers can implement today
+- Write in second person ("you") to engage the reader
+- Break up text with subheadings every 200-300 words
+- Use bullet points and numbered lists for scanability
+- Include relevant internal context about professional photography benefits
+
+SEO REQUIREMENTS:
+- Include primary keyword in first 100 words naturally
+- Use target keywords 3-5 times throughout (naturally, not stuffed)
+- Write a compelling meta description (150-155 characters) that includes primary keyword
+- Create an excerpt that makes people want to click
+
+TONE:
+- Professional and authoritative (we're the experts)
+- Helpful and educational (genuinely trying to help)
+- Conversational but not casual
+- Confident without being arrogant
+- Arizona-local perspective when relevant
+
+SOFT SELL (weave in naturally, don't force):
+- Mention that professional photography makes a difference
+- Reference Arizona-specific context that ListerPros understands
+- The CTA should feel like helpful advice, not a sales pitch
+
+=== OUTPUT FORMAT ===
+Respond with ONLY a JSON object:
 {{
-    "title": "The blog post title",
-    "meta_description": "155 character meta description for SEO",
-    "content": "The full HTML content with <h2>, <h3>, <p>, <ul>, <li> tags",
-    "excerpt": "A 2-3 sentence excerpt for the blog index",
+    "title": "SEO-optimized title (50-65 characters)",
+    "meta_description": "Compelling meta description with keyword (150-155 characters exactly)",
+    "content": "Full HTML content using h2, h3, p, ul, ol, li, strong, em, blockquote tags only",
+    "excerpt": "2-3 sentence excerpt that hooks readers and includes value proposition",
     "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
 }}
 
-Write the content section as valid HTML using only these tags: h2, h3, p, ul, ol, li, strong, em, blockquote.
-Do NOT include the title in the content - it will be added separately."""
+IMPORTANT:
+- Do NOT include the title in the content (it's added separately)
+- Use proper HTML formatting
+- Make it genuinely valuable - this should be content people want to read and share"""
 
     try:
         response = requests.post(
@@ -240,9 +449,9 @@ Do NOT include the title in the content - it will be added separately."""
                 "model": "grok-4-latest",
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.7,
-                "max_tokens": 4000,
+                "max_tokens": 6000,
             },
-            timeout=120,
+            timeout=180,
         )
         response.raise_for_status()
         content = response.json()["choices"][0]["message"]["content"]
@@ -360,6 +569,12 @@ def save_blog_post(blog_data: dict) -> Optional[str]:
     if POSTS_JSON.exists():
         with open(POSTS_JSON, "r") as f:
             posts = json.load(f)
+
+    # Check if post with same slug already exists (avoid duplicates)
+    existing_slugs = [p["slug"] for p in posts]
+    if slug in existing_slugs:
+        print(f"Post with slug '{slug}' already exists, skipping...")
+        return None
 
     # Add new post at the beginning
     posts.insert(0, post_entry)
@@ -493,6 +708,7 @@ def main():
     topic_data = search_trending_topics()
     print(f"   Topic: {topic_data['title']}")
     print(f"   Category: {topic_data['category']}")
+    print(f"   Keywords: {topic_data.get('target_keywords', [])}")
 
     # Step 2: Research the topic
     print("\n2. Researching topic...")
@@ -516,7 +732,7 @@ def main():
     slug = save_blog_post(blog_data)
 
     if not slug:
-        print("ERROR: Failed to save blog post")
+        print("ERROR: Failed to save blog post (may be duplicate)")
         return
 
     # Step 5: Regenerate index page
