@@ -304,21 +304,21 @@ Based on the topic seed "{base_topic}", generate a specific, timely blog post to
 3. Position ListerPros as the authority on real estate photography in Arizona
 4. Be specific enough to write a comprehensive, actionable article
 
-IMPORTANT - CURRENT YEAR REQUIREMENT:
-- Today's date is {datetime.now().strftime('%B %d, %Y')} - the current year is {CURRENT_YEAR}
-- If the title includes a year, it MUST be {CURRENT_YEAR} (not 2024, not 2025 - use {CURRENT_YEAR})
-- Frame all content as current and relevant for {CURRENT_YEAR}
-- Example: "{CURRENT_YEAR} Arizona Real Estate Trends" NOT "2024 Arizona Real Estate Trends"
+YEAR GUIDANCE:
+- Today's date is {datetime.now().strftime('%B %d, %Y')} (current year: {CURRENT_YEAR})
+- NOT every title needs a year - evergreen titles like "How to Stage Your Arizona Home for Photos" are great
+- But IF the title references a year, it MUST be {CURRENT_YEAR} (never 2024 or 2025)
+- Mix it up - some posts can be timeless/evergreen, others can be timely with the current year
 
 The topic should:
 - Have clear search intent (someone would actually Google this)
 - Be specific and actionable (not too broad)
 - Connect to Arizona/Phoenix when possible
-- Be timely and current for {CURRENT_YEAR}
+- Be either evergreen OR timely (variety is good)
 
 Respond with ONLY a JSON object in this exact format:
 {{
-    "title": "The complete blog post title (50-65 characters ideal for SEO) - if including a year, use {CURRENT_YEAR}",
+    "title": "The complete blog post title (50-65 characters ideal for SEO)",
     "search_query": "A search query to research current information on this topic",
     "angle": "The unique angle or hook that makes this article valuable",
     "target_keywords": ["primary keyword", "secondary keyword", "long-tail keyword"],
@@ -423,12 +423,11 @@ ANGLE: {topic_data.get('angle', 'comprehensive guide')}
 TARGET KEYWORDS: {', '.join(topic_data.get('target_keywords', []))}
 SEARCH INTENT: {topic_data.get('search_intent', 'informational')}
 
-=== CURRENT YEAR ===
+=== DATE CONTEXT ===
 TODAY'S DATE: {datetime.now().strftime('%B %d, %Y')}
 CURRENT YEAR: {CURRENT_YEAR}
-- If the title or content references a year, it MUST be {CURRENT_YEAR}
-- Frame all content as current and relevant for {CURRENT_YEAR}
-- This blog post should feel fresh and timely, written in {CURRENT_YEAR}
+- If you reference a specific year anywhere, use {CURRENT_YEAR} (never 2024 or 2025)
+- But not every post needs year references - evergreen content is valuable too
 
 === RESEARCH NOTES ===
 {research}
@@ -444,8 +443,7 @@ STRUCTURE:
 
 CONTENT GUIDELINES:
 - Write 1,400-1,800 words (comprehensive but not padded)
-- ALL YEARS IN TITLES AND CONTENT MUST BE {CURRENT_YEAR} - never use 2024 or 2025
-- You may reference statistics from previous years (e.g., "{CURRENT_YEAR - 1} data showed...") but the post itself should be framed as a {CURRENT_YEAR} article
+- If you mention a specific year, use {CURRENT_YEAR} - but evergreen content without year references is also great
 - Focus on actionable advice over statistics
 - If you don't have current data, use phrases like "industry research shows" or "studies consistently find"
 - Include practical, actionable advice readers can implement today
