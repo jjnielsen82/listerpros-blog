@@ -29,6 +29,7 @@ BRAND_GUIDELINES = """
 ABOUT LISTERPROS:
 - ListerPros is Arizona's premier real estate photography company, founded in 2013 and headquartered in Mesa, AZ
 - We serve the entire Phoenix metro area including Phoenix, Scottsdale, Mesa, Gilbert, Chandler, Tempe, Glendale, Peoria, and surrounding areas
+- We also serve Tucson and Southern Arizona markets
 - We've photographed over 150,000 properties and served 5,000+ real estate agents
 - We maintain a 4.9-star rating with 97%+ satisfaction rate
 
@@ -60,13 +61,17 @@ SEO TARGET KEYWORDS (incorporate naturally):
 - real estate photography Arizona
 - real estate photographer Phoenix
 - real estate photography Scottsdale
+- real estate photographer Tucson
+- real estate photography Tucson
 - professional real estate photos
 - real estate media services Arizona
 - property photography Phoenix
+- property photography Tucson
 - listing photography Arizona
 - real estate video tours Phoenix
 - drone photography real estate Arizona
 - virtual staging Arizona
+- Tucson real estate photography
 
 WHAT TO AVOID:
 - Don't be salesy or pushy - educate first, soft-sell second
@@ -138,6 +143,17 @@ TOPIC_CATEGORIES = {
         "North Scottsdale vs South Scottsdale",
         "East Valley vs West Valley Arizona",
         "Arizona new construction homes trends",
+        "Tucson real estate market trends",
+        "Tucson vs Phoenix housing market comparison",
+        "best neighborhoods in Tucson for home buyers",
+        "Tucson luxury real estate market",
+        "Oro Valley Arizona real estate guide",
+        "Marana Arizona housing market",
+        "Tucson foothills homes market",
+        "Southern Arizona retirement communities",
+        "Tucson investment property opportunities",
+        "Sahuarita Arizona real estate trends",
+        "University of Arizona area real estate Tucson",
     ],
     "marketing": [
         "how professional photos help sell homes faster",
@@ -236,6 +252,8 @@ TOPIC_CATEGORIES = {
         "selling a luxury home guide",
         "FSBO vs agent for home sales",
         "understanding days on market metrics",
+        "selling a home in Tucson guide",
+        "Tucson home photography tips",
     ],
 }
 
