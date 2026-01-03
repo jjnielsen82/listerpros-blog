@@ -252,9 +252,9 @@ def get_random_blog_image() -> str:
                  list(BLOG_IMAGES_DIR.glob("*.webp"))
         if images:
             selected = random.choice(images)
-            return f"/images/blog/{selected.name}"
+            return f"images/blog/{selected.name}"
     # Fallback - should not happen if images are added
-    return "/images/blog/ListerPros-001.jpg"
+    return "images/blog/ListerPros-001.jpg"
 
 
 def search_trending_topics() -> dict:
