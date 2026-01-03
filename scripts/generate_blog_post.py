@@ -304,11 +304,13 @@ Based on the topic seed "{base_topic}", generate a specific, timely blog post to
 3. Position ListerPros as the authority on real estate photography in Arizona
 4. Be specific enough to write a comprehensive, actionable article
 
-YEAR GUIDANCE:
+TITLE RULES - IMPORTANT:
 - Today's date is {datetime.now().strftime('%B %d, %Y')} (current year: {CURRENT_YEAR})
-- NOT every title needs a year - evergreen titles like "How to Stage Your Arizona Home for Photos" are great
-- But IF the title references a year, it MUST be {CURRENT_YEAR} (never 2024 or 2025)
-- Mix it up - some posts can be timeless/evergreen, others can be timely with the current year
+- MOST titles should be EVERGREEN with NO year - like "How to Stage Your Arizona Home for Photos" or "Why Professional Photography Sells Homes Faster"
+- Only about 1 in 5 posts should have a year in the title
+- If you DO include a year, it must be {CURRENT_YEAR}
+- Evergreen titles are better for long-term SEO - they don't look dated next year
+- DO NOT start the title with a year - that looks AI-generated
 
 The topic should:
 - Have clear search intent (someone would actually Google this)
