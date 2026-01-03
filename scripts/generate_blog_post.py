@@ -18,7 +18,7 @@ import subprocess
 # Configuration
 GROK_API_KEY = os.environ.get("GROK_API_KEY")
 GROK_API_URL = "https://api.x.ai/v1/chat/completions"
-POSTS_DIR = Path(__file__).parent.parent / "posts"
+POSTS_DIR = Path(__file__).parent.parent  # Save posts to root directory
 TEMPLATES_DIR = Path(__file__).parent.parent / "templates"
 POSTS_JSON = Path(__file__).parent.parent / "posts.json"
 
@@ -340,8 +340,8 @@ def save_blog_post(blog_data: dict) -> Optional[str]:
     # Ensure posts directory exists
     POSTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Save the HTML file
-    post_filename = f"{date_str}-{slug}.html"
+    # Save the HTML file (slug only, no date prefix for cleaner URLs)
+    post_filename = f"{slug}.html"
     post_path = POSTS_DIR / post_filename
     with open(post_path, "w") as f:
         f.write(html)

@@ -3,7 +3,12 @@
 
 [[redirects]]
   from = "/blog/:slug"
-  to = "/posts/:slug.html"
+  to = "/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/:slug"
+  to = "/:slug.html"
   status = 200
 
 [[redirects]]
