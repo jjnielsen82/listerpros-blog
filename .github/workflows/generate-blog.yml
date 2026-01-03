@@ -1,0 +1,27 @@
+name: Generate Blog Post
+
+  on:
+    schedule:
+      - cron: '0 0,6,12,18 * * *'
+    workflow_dispatch:
+
+  permissions:
+    contents: write
+
+  jobs:
+    generate-post:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-python@v5
+          with:
+            python-version: '3.11'
+        - run: pip install -r requirements.txt
+        - run: |
+            git config --local user.email "blog-bot@listerpros.com"
+            git config --local user.name "ListerPros Blog Bot"
+        - run: python scripts/generate_blog_post.py
+          env:
+            GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
+            CI: true
+        - run: git push
