@@ -270,9 +270,13 @@ TOPIC_CATEGORIES = {
 # Portfolio images directory (your own photos)
 BLOG_IMAGES_DIR = Path(__file__).parent.parent / "images" / "blog"
 
+# CDN base URL for images - uses jsDelivr to serve images directly from GitHub
+# This ensures images load on any domain without needing to deploy them with the site
+IMAGE_CDN_BASE = "https://cdn.jsdelivr.net/gh/jjnielsen82/listerpros-blog@main/images/blog"
+
 
 def get_random_blog_image() -> str:
-    """Get a random image from the blog images folder."""
+    """Get a random image from the blog images folder, served via CDN."""
     if BLOG_IMAGES_DIR.exists():
         images = list(BLOG_IMAGES_DIR.glob("*.jpg")) + \
                  list(BLOG_IMAGES_DIR.glob("*.jpeg")) + \
@@ -280,9 +284,9 @@ def get_random_blog_image() -> str:
                  list(BLOG_IMAGES_DIR.glob("*.webp"))
         if images:
             selected = random.choice(images)
-            return f"images/blog/{selected.name}"
+            return f"{IMAGE_CDN_BASE}/{selected.name}"
     # Fallback - should not happen if images are added
-    return "images/blog/ListerPros-001.jpg"
+    return f"{IMAGE_CDN_BASE}/ListerPros-001.jpg"
 
 
 def search_trending_topics() -> dict:
