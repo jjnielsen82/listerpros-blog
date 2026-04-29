@@ -1,0 +1,33 @@
+name: Publish Drafts (drip-publisher)
+
+# Runs daily at 6:00 AM Phoenix time (13:00 UTC). Picks any drafts in
+# _drafts/queue.json whose publish_date <= today and ships them.
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          git config --local user.email "blog-bot@listerpros.com"
+          git config --local user.name "ListerPros Drip Publisher"
+      - run: python scripts/publish_drafts.py
+      - run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "Auto-publish drafts due $(date +%Y-%m-%d)"
+            git push
+          else
+            echo "No drafts due today — nothing to commit."
+          fi
