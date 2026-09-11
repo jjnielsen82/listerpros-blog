@@ -16,3 +16,9 @@ Thumbs.db
 
 # Local testing
 *.local
+
+node_modules/
+blog-dist/
+__pycache__/
+.netlify/
+redesign/*.log

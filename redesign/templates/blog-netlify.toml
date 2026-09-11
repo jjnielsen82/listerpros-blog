@@ -1,0 +1,19 @@
+[build]
+publish = "."
+
+[[redirects]]
+from = "/tag/:tag"
+to = "/tag/:tag/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/page/:page"
+to = "/page/:page/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/:slug"
+to = "/:slug.html"
+status = 200

@@ -1,0 +1,11 @@
+{
+  "name": "listerpros-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "python3 redesign/build_blog.py && tailwindcss -c tailwind.config.cjs -i redesign/assets/tailwind-input.css -o blog-dist/assets/lp/option-a-20260911/utilities.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
